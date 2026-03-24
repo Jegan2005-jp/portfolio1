@@ -1135,3 +1135,57 @@ body {
     color: #ffffff;
   }
 }
+/* ===== FORCE CENTER CARTOON (FINAL FIX) ===== */
+
+.hero,
+.hero-section,
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+
+/* Cartoon parent */
+.hero-right,
+.hero-visual,
+.hero-image,
+.image-wrap,
+.cartoon-wrap {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Cartoon image itself */
+.hero-right img,
+.hero-visual img,
+.hero-image img,
+.image-wrap img,
+.cartoon-wrap img {
+  display: block;
+  margin: 0 auto !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* MOBILE ONLY STRONG FIX */
+@media (max-width: 768px) {
+  .hero-right,
+  .hero-visual,
+  .hero-image,
+  .image-wrap,
+  .cartoon-wrap {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .hero-right img,
+  .hero-visual img,
+  .hero-image img {
+    width: 220px;
+    margin: 0 auto !important;
+  }
+}
