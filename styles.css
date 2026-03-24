@@ -317,11 +317,15 @@ p {
   letter-spacing: 0.02em;
 }
 
+/* NEW FIX */
 .hero-right {
   position: relative;
   min-height: 340px;
-  justify-self: end;
-  transform: translateX(18px);
+  justify-self: center; /* center grid item */
+  transform: none; /* remove right shift */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-frame {
@@ -1187,5 +1191,12 @@ body {
   .hero-image img {
     width: 220px;
     margin: 0 auto !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-right {
+    justify-self: center !important;
+    transform: none !important;
+    margin: 0 auto;
   }
 }
