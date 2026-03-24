@@ -1026,3 +1026,112 @@ p {
   }
 
 }
+/* ===== FINAL MOBILE + THEME FIX ===== */
+html, body {
+  background: #0b0f1a;
+  color: #ffffff;
+}
+
+/* Keep same dark-blue theme on all devices */
+body {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.22), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 30%),
+    linear-gradient(180deg, #0b0f1a 0%, #101626 100%);
+}
+
+/* Make hero area dark also on mobile */
+.hero, .hero-section, .home-section {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.20), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.14), transparent 30%),
+    linear-gradient(180deg, #0b0f1a 0%, #101626 100%);
+}
+
+/* Cartoon/illustration should stay centered */
+.hero-visual, .hero-image, .hero-right, .cartoon-wrap, .image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cartoon image */
+.hero-visual img, .hero-image img, .hero-right img, .cartoon-wrap img, .image-wrap img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(124, 58, 237, 0.26), transparent 40%),
+      radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.18), transparent 35%),
+      linear-gradient(180deg, #0b0f1a 0%, #101626 100%);
+  }
+
+  .hero, .hero-section, .home-section {
+    padding: 28px 16px 18px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content, .hero-left, .hero-text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Move cartoon to center on phone */
+  .hero-visual, .hero-image, .hero-right, .cartoon-wrap, .image-wrap {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;
+  }
+
+  /* Make cartoon smaller and centered */
+  .hero-visual img, .hero-image img, .hero-right img, .cartoon-wrap img, .image-wrap img {
+    width: 220px;
+    max-width: 72vw;
+    margin: 0 auto;
+  }
+
+  /* Keep heading visible */
+  h1, .hero h1 {
+    font-size: 34px;
+    line-height: 1.08;
+    text-align: center;
+  }
+
+  .hero p, .hero-subtitle, .hero-description {
+    color: rgba(255,255,255,0.86);
+    text-align: center;
+  }
+
+  /* Buttons stack nicely */
+  .hero-buttons, .buttons, .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-buttons a, .buttons a, .cta-buttons a,
+  .hero-buttons button, .buttons button, .cta-buttons button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Reduce white/light fade effect */
+  .about, .skills, .projects, .publication, .certifications, .resume, .contact {
+    background: transparent;
+  }
+
+  .section-title, h2 {
+    color: #ffffff;
+  }
+}
